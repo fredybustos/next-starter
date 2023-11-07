@@ -7,11 +7,11 @@ const rubik = Rubik({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Starter',
-  description: 'Generator of apps',
+  description: 'Generator of apps'
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {

@@ -1,5 +1,5 @@
-import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials";
+import NextAuth from 'next-auth'
+import CredentialsProvider from 'next-auth/providers/credentials'
 
 const handler = NextAuth({
   providers: [
@@ -7,16 +7,16 @@ const handler = NextAuth({
       name: 'credentials',
       credentials: {
         email: { label: 'Email', type: 'email' },
-        password: { label: 'Password', type: 'password' },
+        password: { label: 'Password', type: 'password' }
       },
-      authorize: async (credentials) => {
+      authorize: async credentials => {
         // implement database connection
-        return { user: credentials?.email } as any;
+        return { user: credentials?.email } as any
       }
     })
   ],
   session: {
-    strategy: "jwt",
+    strategy: 'jwt'
   },
   callbacks: {
     jwt: ({ token, user }) => {
@@ -26,7 +26,7 @@ const handler = NextAuth({
           id: currentUser.id,
           email: currentUser.email,
           name: currentUser.name,
-          lastname: currentUser.lastname,
+          lastname: currentUser.lastname
         }
       }
       return token
@@ -41,6 +41,5 @@ const handler = NextAuth({
     signOut: '/signup'
   }
 })
-
 
 export { handler as GET, handler as POST }
