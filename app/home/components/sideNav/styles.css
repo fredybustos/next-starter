@@ -1,0 +1,9 @@
+.sidenav-ctn {
+  @apply w-full flex-none md:w-64;
+}
+.sidenav-logo {
+ @apply h-10 flex flex-row items-center bg-blue-600 px-2;
+}
+.sidenav-icon {
+  @apply w-6 cursor-pointer text-white md:hidden;
+}

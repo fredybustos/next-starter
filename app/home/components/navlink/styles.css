@@ -1,0 +1,11 @@
+.navLink-ctn {
+  @apply flex justify-between flex-col transition-all fixed md:absolute top-10 bottom-0 bg-gray-50 whitespace-nowrap md:w-64;
+}
+
+.navLink-item {
+  @apply text-black flex h-[48px] items-center rounded-lg p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600;
+}
+
+.navLink-selected {
+  @apply bg-sky-100 text-blue-600;
+}
